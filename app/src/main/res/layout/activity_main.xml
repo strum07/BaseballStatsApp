@@ -16,12 +16,14 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Ace of Base! "
         android:id="@+id/deadtextView"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_weight="1">
 
         <TextView
             android:layout_width="match_parent"
@@ -34,14 +36,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="dummys"
-            android:layout_gravity="right" />
+            android:id="@+id/totalHits_EdittextView"/>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_weight="1">
 
         <TextView
             android:layout_width="match_parent"
@@ -53,8 +56,8 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="dummy"
-            android:layout_gravity="right" />
+            android:id="@+id/totaldoubles_EdittextView"
+            android:text="dummy" />
 
     </LinearLayout>
 
@@ -62,7 +65,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_weight="1">
 
         <TextView
             android:layout_width="match_parent"
@@ -74,15 +78,16 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="dummy"
-            android:layout_gravity="right" />
+            android:id="@+id/totalTriples_EdittextView"
+            android:text="dummy" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_weight="1">
 
         <TextView
             android:layout_width="match_parent"
@@ -94,15 +99,16 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="dummy"
-            android:layout_gravity="right" />
+            android:id="@+id/totalhomeruns_EdittextView"
+            android:text="dummy" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_weight="1">
 
         <TextView
             android:layout_width="match_parent"
@@ -114,8 +120,8 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="dummy"
-            android:layout_gravity="right" />
+            android:id="@+id/totalbats_EdittextView"
+            android:text="dummy" />
 
     </LinearLayout>
 
