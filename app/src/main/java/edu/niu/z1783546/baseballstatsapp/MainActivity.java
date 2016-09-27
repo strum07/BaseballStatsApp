@@ -1,5 +1,16 @@
 package edu.niu.z1783546.baseballstatsapp;
 
+/**
+ * Created by Sagar Sudhakar on 9/26/2016.
+ *
+ * Assignment 1
+ * TA: Akash Rangojoo
+ * Instructor: G Brown
+ * Date: 26th September 2016
+ */
+
+
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
