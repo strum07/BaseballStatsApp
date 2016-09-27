@@ -147,7 +147,8 @@
         android:textSize="24sp"
         android:layout_gravity="center"
         android:text="Compute!"
-        android:id="@+id/button_compute" />
+        android:id="@+id/button_compute"
+        android:allowUndo="true" />
 
 
 
@@ -163,7 +164,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Total number of Bases:"
-            android:id="@+id/deadtextView"
+            android:id="@+id/basesdeadtextView"
             android:textSize="32sp"
             android:layout_gravity="center_horizontal"
             android:textColor="#000000"
@@ -173,7 +174,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/totalbats_EdittextView"
+            android:id="@+id/base_EdittextView"
             android:text="0" />
 
     </LinearLayout>
@@ -199,7 +200,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/totalbats_EdittextView"
+            android:id="@+id/slug_EdittextView"
             android:text="0" />
 
     </LinearLayout>
