@@ -4,8 +4,8 @@ Alright, Gentlemen! Let's dive in, shall we? :D
 
 ## Project Deliverable Items
 <ol>
-<li>README.md which is also the design documentation</li>
 <li>TLDR-README.md - The one you are reading! :)</li>
+<li>README.md which is also the design documentation</li>
 <li>Zipped Project Source Code</li>
 <li>NAssociativeCache.jar - (The JAR file which can be distributed and used without having the source code)</li>
 </ol>
@@ -32,7 +32,7 @@ Alright, Gentlemen! Let's dive in, shall we? :D
 
 ## Build
 <p>If you'd like to build the project and use the JAR generated to plug it into a new project to test it, read on. You could
-skip to **SETUP** if you already have the JAR from this step or choose to use the JAR bundled with the project deliverable.</p>
+skip to PROJECT SETUP if you already have the JAR from this step or choose to use the JAR bundled with the project deliverable.</p>
 
 
 **Step 1:** Navigate to the working directory on the terminal/command prompt
@@ -217,12 +217,11 @@ Find their usage below :)
 
 
 
-#####**Bonus Step**: CUSTOM Cache usage
+##### **Bonus Step**: CUSTOM Cache usage
 <p> By using the Custom cache, you have the ability to plug in your own algorithm complying to cache/eviction strategy
 interface methods and make it work the way you want it. Below is a sample code on how to use this feature.</p>
 
 Implementation of CustomStrategy to perform like LruStrategy
-
 
 ```java
  strategy.changeStrategy(new CustomStrategy<Integer, Integer>(cache) {
@@ -268,8 +267,7 @@ makes the entire project run. You will be able to explore the tests and results 
 * [Maven](https://maven.apache.org/) - For Dependency Management
 * [Git](https://git-scm.com/) - For Version Control
 * [IntelliJ IDEA](https://www.jetbrains.com/idea/) - As the sole IDE
-* [C8H10N4O2](https://pubchem.ncbi.nlm.nih.gov/compound/caffeine#section=Top)
-
+* [C8H10N4O2](https://pubchem.ncbi.nlm.nih.gov/compound/caffeine#section=Top) - For letting keeping me up
 
 ## Authors
 * **Sagar Sudhakar** - [LinkedIn](https://www.linkedin.com/in/sagarsudhakar/)
