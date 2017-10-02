@@ -2,7 +2,7 @@
 Alright, Gentlemen! Let's dive in, shall we? :D
 
 
-##Project Deliverable Items
+## Project Deliverable Items
 <ol>
 <li>README.md which is also the design documentation</li>
 <li>TLDR-README.md - The one you are reading! :)</li>
@@ -11,7 +11,7 @@ Alright, Gentlemen! Let's dive in, shall we? :D
 </ol>
 
 
-##Things to know
+## Things to know
 <p>Apart from conforming to the requirements expectations set for this assessment(found in the README.md: The "too long, please read me" version :p)</p>
 
 <ol>
@@ -22,7 +22,7 @@ Alright, Gentlemen! Let's dive in, shall we? :D
 </ol> 
 
 
-##Prerequisite Installations
+## Prerequisite Installations
 <ol>
 <li>Standard Edition Java SDK </li>
 <li>An IDE</li>
@@ -30,7 +30,7 @@ Alright, Gentlemen! Let's dive in, shall we? :D
 </ol>
 
 
-##Build
+## Build
 <p>If you'd like to build the project and use the JAR generated to plug it into a new project to test it, read on. You could
 skip to **SETUP** if you already have the JAR from this step or choose to use the JAR bundled with the project deliverable.</p>
 
@@ -55,7 +55,7 @@ $workingDirectory>mvn clean install
 
 
 
-##Project Setup 
+## Project Setup 
 - **JAR SETUP**
 The JAR file, import that as a dependency to your new JAVA project
 
@@ -70,72 +70,72 @@ After successfully importing the JAR file, you will now be able to use the class
 
 For the entire scope of the project resides in the below package. 
 
-```
+```java
  import sagarsudhakar.nsetassociativecache.*;
 ```
  
  Let's dig a little deeper!
  
-####The following package contains everything related to the Cache
-```
+#### The following package contains everything related to the Cache
+```java
   import sagarsudhakar.nsetassociativecache.cache.*;
 ```
   
   - The cache which we will make use of(set associative cache) can be found as the following
-```
+```java
     import sagarsudhakar.nsetassociativecache.cache.SetAssociativeCache;
 ```
  
  - If you'd like to build your own custom cache, you could implement the following interface
-```
+```java
      import sagarsudhakar.nsetassociativecache.cache.CacheInterface;
 ``` 
   - This is all we'll make use of in this package(As imports, internally we make use of DLLNode and Set as well)
   
   
-####The following package contains everything related to the Replacement Algorithms
-```
+#### The following package contains everything related to the Replacement Algorithms
+```java
   import sagarsudhakar.nsetassociativecache.evictionstrategy.*;
 ```
  - To make sure that the strategies can be plugged in at runtime, we need the following context import
-```
+```java
    import sagarsudhakar.nsetassociativecache.evictionstrategy.EvictionStrategyContext;
 ```
  
-####The Replacement Policies available
+#### The Replacement Policies available
  - The LEAST RECENTLY USED Algorithm can be implemented using this import 
-```
+```java
     import sagarsudhakar.nsetassociativecache.evictionstrategy.LruStrategy;
 ``` 
 
  - The MOST RECENTLY USED Algorithm can be implemented using this import 
-```
+```java
     import sagarsudhakar.nsetassociativecache.evictionstrategy.MruStrategy;
 ``` 
 
  - The CUSTOM Algorithms can be implemented using this import which can be extended during object instantiation
-```
+```java
     import sagarsudhakar.nsetassociativecache.evictionstrategy.CustomStrategy;
 ``` 
 
 - The RANDOM Eviction Algorithm can be implemented using this import 
-```
+```java
     import sagarsudhakar.nsetassociativecache.evictionstrategy.RandomStrategy;
 ``` 
 
 - If you'd like to build your own replacement policy(apart from CUSTOM option), you could implement the following interface
-```
+```java
      import sagarsudhakar.nsetassociativecache.evictionstrategy.EvictionStrategy;
 ``` 
 
-##Execution and Usage
+## Execution and Usage
 
-#####**Step 1**: Initialize a cache following an eviction policy(following example is an implementation of LRU)
+##### **Step 1**: Initialize a cache following an eviction policy(following example is an implementation of LRU)
 - You'll need to import as described previously
 - Setup Cache object
 - Setup Strategy Context object
 
-```
+```java
      import com.sagarsudhakar.nsetassociativecache.cache.CacheInterface;
      import com.sagarsudhakar.nsetassociativecache.cache.SetAssociativeCache;
      import com.sagarsudhakar.nsetassociativecache.evictionstrategy.EvictionStrategyContext;
@@ -156,9 +156,9 @@ For the entire scope of the project resides in the below package.
 ``` 
 
 
-#####**Step 2**: Insert data into the Cache
+##### **Step 2**: Insert data into the Cache
 
-```
+```java
     //POPULATING THE CACHE
     for (int counter = 0; counter < 12; counter++) {
     
@@ -167,8 +167,8 @@ For the entire scope of the project resides in the below package.
     }
 ```
 
-#####**Step 3**: Change the policy for the same cache(Changing from LRU to MRU/Random)
-```
+##### **Step 3**: Change the policy for the same cache(Changing from LRU to MRU/Random)
+```java
            //Changing eviction policy to MRU (pass cache object)
           strategy.changeStrategy(new MruStrategy(cache));
            
@@ -179,7 +179,7 @@ For the entire scope of the project resides in the below package.
 **Note that imports needed for the policies are included as described above
 
 
-#####**Step 4**: Options available for Cache
+##### **Step 4**: Options available for Cache
 
 
 Find their usage below :)
@@ -224,7 +224,7 @@ interface methods and make it work the way you want it. Below is a sample code o
 Implementation of CustomStrategy to perform like LruStrategy
 
 
-```
+```java
  strategy.changeStrategy(new CustomStrategy<Integer, Integer>(cache) {
             public void set(Integer key, Integer value) {
                 if (cache.search(key)) {
